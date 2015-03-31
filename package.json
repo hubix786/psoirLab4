@@ -9,10 +9,10 @@
   "author": "Radek Adamus <adamusr@gmail.com> (https://github.com/radamus/)",
   "license": "MIT",
   "dependencies": {
-    "webs-weeia": "0.0.2",
+    "async": "^0.2.10",
+    "aws-sdk": "^2.1.20",
     "ejs": "^1.0.0",
     "moment": "^2.5.1",
-    "async": "^0.2.10",
-    "aws-sdk": "^2.0.0-rc13"
+    "webs-weeia": "0.0.2"
   }
 }

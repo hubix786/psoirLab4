@@ -1,8 +1,8 @@
 {	"expiration" : {"day":1},
-	"conditions": [ ["starts-with", "$key", "radek.student"],
+	"conditions": [ ["starts-with", "$key", "hubert.sochacki/"],
     				 {"bucket": "lab4-weeia"}, 
     				 {"acl": "private"},
-    				 {"success_action_redirect": "http:\\localhost:8080"},   
+    				 {"success_action_redirect": "http://localhost:8080"},   
     				 ["content-length-range", 0, 1048576]
     				]   
 }

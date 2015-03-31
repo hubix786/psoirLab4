@@ -3,16 +3,45 @@
 		<link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css" rel="stylesheet">	
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />	
 	</head>
-	<body>
+	<body style="background: #7de87d; /* Old browsers */
+background: -moz-linear-gradient(top, #7de87d 0%, #1e5799 87%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#7de87d), color-stop(87%,#1e5799)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, #7de87d 0%,#1e5799 87%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, #7de87d 0%,#1e5799 87%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, #7de87d 0%,#1e5799 87%); /* IE10+ */
+background: linear-gradient(to bottom, #7de87d 0%,#1e5799 87%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7de87d', endColorstr='#1e5799',GradientType=0 ); /* IE6-9 */">
 		<nav class="navbar">
 			
 		</nav>
 		<div class="container">
-		<section id="section1" class="panel panel-default">
-
+		<%if(typeof(success)!=="undefined"){%>
+		<!--<div class="alert alert-info">
+			<strong>Well done, my friend!</strong> You successfully uploaded your file on S3! Here is a link, which expires for 60 seconds:<br/>
+			<a class="btn btn-success" href="<%=success.url%>">Download it! C'mon don't be shy</a>
+		</div>-->
+		
+		<section id="section0" class="panel panel-default">
 			<div class="panel-heading">
 			<div class="container">
-	    		<h3 class="panel-title">POSTing a file to Amazon S3</h3>
+	    		<h3 class="panel-title"><strong>File sended to Amazon S3 successfully</strong></h3>
+	    		</div>
+		  	</div>
+			<div class="panel-body">
+				<div class="container">
+				File transfer to Amazon Simple Storage Service completed successfully. Following download link is active for 60 seconds.<br/>
+				<div class="col-xs-3">
+				<a href="<%success.url%>"><button class="btn btn-success btn-block" style="margin-top: 20px; "> <strong>Download File</strong> </button></a></div></div>
+			</div>
+			<footer class="panel-footer">
+				
+			</footer>
+		</section>
+		<%}%>
+		<section id="section1" class="panel panel-default">
+			<div class="panel-heading">
+			<div class="container">
+	    		<h3 class="panel-title"><strong>POSTing a file to Amazon S3</strong></h3>
 	    		</div>
 		  	</div>
 	  		<div class="panel-body">
